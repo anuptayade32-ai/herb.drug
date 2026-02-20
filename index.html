@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Herb-Drug Interaction Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🌿 Herb-Modern Drug AI</h1>
+            <p>Cross-referencing herbal supplements with clinical drug data.</p>
+        </header>
+
+        <main class="interaction-form">
+            <div class="input-group">
+                <label for="herbInput">Herbal Supplement</label>
+                <input type="text" id="herbInput" placeholder="e.g. St. John's Wort">
+            </div>
+
+            <div class="input-group">
+                <label for="modernInput">Modern Medication</label>
+                <input type="text" id="modernInput" placeholder="e.g. Warfarin">
+            </div>
+
+            <button id="analyzeBtn" onclick="analyzeInteractions()">Analyze Interaction</button>
+        </main>
+
+        <section id="resultsSection" class="hidden">
+            <div class="result-card" id="resultCard">
+                <h2 id="resultTitle">Analysis Result</h2>
+                <div id="severityBadge" class="badge">Checking...</div>
+                <p id="interactionText"></p>
+                <small class="disclaimer">Note: This is an AI-assisted tool. Consult a medical professional.</small>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
